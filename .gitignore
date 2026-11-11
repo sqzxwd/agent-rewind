@@ -1,0 +1,29 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Testing & Coverage
+.pytest_cache/
+test_output*
+
+# agent-rewind internal storage
+.rewind/
+
+# Build & Distribution
+dist/
+build/
+*.egg-info/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Ad-hoc agent test scripts
+agent_break.py

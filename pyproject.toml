@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agent-rewind"
+version = "0.1.0"
+description = "Git-less time-machine and sandbox for AI agents"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.0.0",
+    "watchfiles>=1.0.0",
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+agent-rewind = "src.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
